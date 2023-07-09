@@ -35,6 +35,7 @@
             color: #333;
             margin: 0;
             padding: 0;
+            padding-bottom: 2rem; /* Add padding to the bottom of the page */
         }
 
         h1 {
@@ -109,6 +110,23 @@
                 font-size: 1.25rem;
             }
         }
+
+        footer {
+            margin-top: auto;
+            padding: 1rem;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -117,7 +135,12 @@
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" placeholder="Enter phone number">
     </div>
-    <a class="btn" id="loadBtn">Load Link</a>
+    <a class="btn" id="loadBtn">Open in whatsapp</a>
+
+    <footer>
+        <p>Made by AmarjithTK (starlighter4097) - All rights reserved</p>
+        <p><a href="https://github.com/starlighter4097">https://github.com/starlighter4097</a></p>
+    </footer>
 
     <script>
         document.getElementById("loadBtn").addEventListener("click", function() {
