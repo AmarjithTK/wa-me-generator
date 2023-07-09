@@ -2,40 +2,112 @@
 <html>
 <head>
     <title>WhatsApp Link Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
+        :root {
+            font-size: 16px;
+        }
+
+        @media (min-width: 600px) {
+            :root {
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width: 960px) {
+            :root {
+                font-size: 20px;
+            }
+        }
+
+        html, body {
+            height: 100%;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        
+
         h1 {
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin: 0 0 1rem;
         }
-        
+
         .input-container {
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
         }
-        
+
+        label {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
         input[type="tel"] {
-            padding: 10px;
-            width: 200px;
-            border-radius: 5px;
+            padding: 0.75rem;
+            border-radius: 0.25rem;
             border: 1px solid #ccc;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+            background-color: #fff;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
-        
+
+        input[type="tel"]:focus {
+            outline: none;
+            border-color: #4d90fe;
+            box-shadow: 0 0 0 0.2rem rgba(77, 144, 254, 0.25);
+        }
+
         .btn {
             display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+            font-weight: 500;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            color: #fff;
+            background-color: #4d90fe;
+            transition: background-color 0.15s ease-in-out;
             text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.5;
+            cursor: pointer;
         }
-        
+
         .btn:hover {
-            background-color: #45a049;
+            background-color: #357ae8;
+        }
+
+        @media (max-width: 599px) {
+            :root {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            input[type="tel"] {
+                font-size: 1.25rem;
+            }
+
+            .btn {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
@@ -45,7 +117,7 @@
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" placeholder="Enter phone number">
     </div>
-    <button class="btn" id="loadBtn">Load Link</button>
+    <a class="btn" id="loadBtn">Load Link</a>
 
     <script>
         document.getElementById("loadBtn").addEventListener("click", function() {
